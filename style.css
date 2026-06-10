@@ -260,3 +260,46 @@ footer{background:var(--dark);color:#c4d0c0;padding:64px 0 36px}
   .stories,.caps,.sec-detail,.info-grid,.qlist{grid-template-columns:1fr}
   .hero h1{font-size:2.5rem}
 }
+
+/* ===== home green band (between What We Do and final CTA) ===== */
+.greenband{background:linear-gradient(135deg,#6aa11f 0%,#83ba33 60%,#9ccb45 100%);color:#0f1a07;position:relative;overflow:hidden}
+.greenband .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:42px 42px;opacity:.45;mask-image:radial-gradient(ellipse 80% 100% at 80% 30%,#000,transparent 75%)}
+.greenband .wrap{position:relative;z-index:1;text-align:center}
+.greenband h2{color:#0f1a07;font-size:clamp(1.9rem,4.2vw,3rem);max-width:22ch;margin:0 auto;letter-spacing:-.02em}
+.greenband p{color:#1d2e0d;max-width:58ch;margin:16px auto 30px;font-size:1.08rem}
+.greenband .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:#10210a;color:#dfeccd}
+.btn-dark:hover{background:#0a1607;transform:translateY(-2px);color:#fff}
+.btn-outline{border-color:rgba(16,33,10,.45);color:#10210a;background:transparent}
+.btn-outline:hover{border-color:#10210a;background:rgba(16,33,10,.08)}
+
+/* ===== final CTA with social ===== */
+.cta-social{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.cta-social a{font-family:"IBM Plex Mono";font-size:.8rem;letter-spacing:.06em;border:1px solid var(--line-2);border-radius:8px;padding:9px 15px;color:var(--ink-soft);transition:.25s}
+.cta-social a:hover{border-color:var(--green);color:var(--green-deep);background:var(--green-tint)}
+
+/* ===== sectors: immersive alternating feature rows ===== */
+.sector-rows{display:flex;flex-direction:column;gap:26px}
+.sector-row{display:grid;grid-template-columns:1.05fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--paper-3);min-height:340px;transition:.3s;scroll-margin-top:110px}
+.sector-row:hover{box-shadow:0 26px 54px -30px rgba(24,36,29,.32);border-color:var(--line-2)}
+.sector-row .vis{position:relative;background:linear-gradient(135deg,#16221a,#0d140d);overflow:hidden;display:grid;place-items:center;min-height:260px}
+.sector-row:nth-child(even) .vis{background:linear-gradient(135deg,#1b2a16,#0d140d)}
+.sector-row .vis .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(131,186,51,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(131,186,51,.10) 1px,transparent 1px);background-size:30px 30px;opacity:.7}
+.sector-row .vis .glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 35%,rgba(131,186,51,.22),transparent 60%)}
+.sector-row .vis .ico{width:88px;height:88px;color:var(--green);position:relative;z-index:2}
+.sector-row .vis .idx{position:absolute;top:20px;left:22px;font-family:"IBM Plex Mono";font-size:.72rem;letter-spacing:.2em;color:rgba(255,255,255,.55);z-index:2}
+.sector-row .vis .big{position:absolute;right:6px;bottom:-34px;font-family:"Bricolage Grotesque";font-weight:800;font-size:9.5rem;line-height:1;color:rgba(131,186,51,.10);z-index:1}
+.sector-row .content{padding:46px 46px;display:flex;flex-direction:column;justify-content:center}
+.sector-row .content h3{font-size:2rem;margin-bottom:12px;letter-spacing:-.02em}
+.sector-row .content p{color:var(--ink-soft);font-size:1.02rem}
+.sector-row .content .tags{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.sector-row .content .tags b{font-family:"IBM Plex Mono";font-weight:500;font-size:.7rem;letter-spacing:.06em;color:var(--green-deep);border:1px solid var(--line-2);border-radius:6px;padding:5px 10px;background:var(--green-tint)}
+.sector-row:nth-child(even) .vis{order:2}
+.sector-row:nth-child(even) .content{order:1}
+@media(max-width:860px){
+  .sector-row{grid-template-columns:1fr}
+  .sector-row .vis{min-height:190px;order:0!important}
+  .sector-row .content{order:0!important;padding:34px 30px}
+  .sector-row .content h3{font-size:1.6rem}
+  .sector-row .vis .big{font-size:7rem;bottom:-24px}
+}
