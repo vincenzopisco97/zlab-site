@@ -13,11 +13,6 @@
 </head>
 <body>
 <header id="hd" class="onhero">
-  <div class="topbar">
-    <a href="company.html" class="toplink">Company</a>
-    <a href="careers.html" class="toplink">Careers</a>
-    <a href="contact.html" class="toplink">Contact</a>
-  </div>
   <nav>
     <a href="index.html" class="logo" aria-label="Z Lab — home"><img class="dark-l" src="logo-light.png" alt="Z Lab"/><img class="light-l" src="logo-dark.png" alt="Z Lab"/></a>
     <ul class="mainnav" id="mainnav">
@@ -57,8 +52,9 @@
           <div class="mega-col"><h5>Explore</h5><a href="sectors.html">Our sectors</a><a href="capabilities.html">Capabilities</a></div>
         </div></div>
       </li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="contact.html" class="nav-cta">Get in touch</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -120,7 +116,7 @@
   addEventListener('scroll',onScroll);onScroll();
   const burger=document.getElementById('burger'),mainnav=document.getElementById('mainnav');
   burger.addEventListener('click',()=>mainnav.classList.toggle('open'));
-  mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{if(innerWidth<=760){e.preventDefault();a.parentElement.classList.toggle('exp');}else mainnav.classList.remove('open');});});
+  mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{const li=a.parentElement;if(innerWidth<=760&&li.querySelector('.mega')){e.preventDefault();li.classList.toggle('exp');}else mainnav.classList.remove('open');});});
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
