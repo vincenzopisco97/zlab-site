@@ -304,3 +304,8 @@ footer{background:var(--dark);color:#c4d0c0;padding:64px 0 36px}
   .sector-row .content h3{font-size:1.6rem}
   .sector-row .vis .big{font-size:7rem;bottom:-24px}
 }
+
+/* compact client chips for the full clients wall */
+#clients .client{flex:0 0 auto;min-height:64px;padding:0 24px;border-radius:12px}
+#clients .client .cn{font-size:1.02rem}
+@media(max-width:760px){#clients .client{padding:0 18px;min-height:58px}#clients .client .cn{font-size:.9rem}}
