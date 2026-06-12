@@ -133,6 +133,18 @@
   mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{const li=a.parentElement;if(innerWidth<=760&&li.querySelector('.mega')){e.preventDefault();li.classList.toggle('exp');}else mainnav.classList.remove('open');});});
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Make cards/rows fully clickable
+  document.querySelectorAll('.story, .sector-row, .cap[id], .info-card').forEach(el => {
+    const a = el.querySelector('a[href]');
+    if (!a) return;
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') return; // let inner links work normally
+      window.location.href = a.getAttribute('href');
+    });
+  });
+
 </script>
 </body>
 </html>
