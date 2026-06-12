@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ILS — Z Lab</title>
-<meta name="description" content="Whole-life cost and supportability: LCC modelling, ILS planning, logistic support analysis and level-of-repair analysis." />
+<title>Dependability — Z Lab</title>
+<meta name="description" content="Reliability, availability, maintainability and safety engineering across the full life cycle." />
 <link rel="icon" type="image/png" href="favicon-light.png" media="(prefers-color-scheme: light)" />
 <link rel="icon" type="image/png" href="favicon-dark.png" media="(prefers-color-scheme: dark)" />
 <link rel="icon" type="image/png" href="favicon.png" />
@@ -44,13 +44,17 @@
 <section class="pagehead" id="top">
   <div class="bp"></div><div class="glow"></div>
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Capabilities</span></div>
-    <h1>ILS</h1>
-    <p>Whole-life cost and supportability: LCC modelling, ILS planning, logistic support analysis and level-of-repair analysis.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="capabilities.html">Capabilities</a><span>/</span><span>Dependability</span></div>
+    <h1>Dependability</h1>
+    <p>Reliability, availability, maintainability and safety — from prediction to certification evidence.</p>
   </div>
 </section>
-<section class="block"><div class="wrap"><div class="head-row reveal"><h2 class="sec-title">What we deliver</h2></div><div class="caps reveal"><div class="cap"><div class="ch"><h3>Integrated Logistics Support &amp; LCC</h3></div><ul><li>Life Cycle Cost (LCC) modelling</li><li>ILS plan &amp; supportability</li><li>Logistic Support Analysis (LSA)</li><li>Level of Repair Analysis (LORA)</li><li>Provisioning &amp; spares</li></ul></div></div></div></section>
-<section class="block sectorbg"><div class="wrap"><div class="head-row reveal"><h2 class="sec-title">Related standards</h2></div><div class="standards-grid reveal"><b>S3000L</b><b>S2000M</b><b>MIL-STD-1388</b><b>IEC 60300</b></div></div></section>
+<section class="block"><div class="wrap"><div class="caps">
+  <div class="cap" id="rams"><div class="ch"><span class="num">01</span><h3>RAMS Analysis</h3></div><p>Reliability, Availability, Maintainability &amp; Safety across the full life cycle.</p><ul><li>Reliability Prediction (NPRD &middot; 217F &middot; Mission)</li><li>FMEA / FMECA / FMES</li><li>FTA</li><li>Testability</li><li>RCM</li><li>Availability</li><li>Spare Part List</li><li>Corrective &amp; Preventive Maintenance</li></ul><a href="service-ram.html" class="link-arrow">Learn more &rarr;</a></div>
+  <div class="cap" id="safety"><div class="ch"><span class="num">02</span><h3>System Safety</h3></div><p>Aviation &amp; functional safety assessments to the ARP / DO framework.</p><ul><li>PHA / HA</li><li>FHA</li><li>PSSA</li><li>SSA</li><li>ARP 4754A / 4761A</li><li>IEC 61508</li></ul><a href="service-safety.html" class="link-arrow">Learn more &rarr;</a></div>
+  <div class="cap" id="ils"><div class="ch"><span class="num">03</span><h3>Life Cycle Cost &amp; ILS</h3></div><p>Cost and supportability modelling plus integrated logistics support.</p><ul><li>LCC (Alstom &middot; HRI &middot; Bombardier)</li><li>ILS Plan &amp; Supportability</li><li>LSA</li><li>LORA</li></ul><a href="service-ils.html" class="link-arrow">Learn more &rarr;</a></div>
+</div></div></section>
+<section class="block sectorbg"><div class="wrap"><div class="head-row reveal"><h2 class="sec-title">Related standards</h2></div><div class="standards-grid reveal"><b>IEC 60300</b><b>MIL-HDBK-217F</b><b>NPRD-2011</b><b>IEC 60812</b><b>IEC 61025</b><b>EN 50126</b><b>SAE ARP 4754A</b><b>SAE ARP 4761A</b><b>IEC 61508</b><b>S3000L</b><b>S2000M</b><b>MIL-STD-1388</b></div></div></section>
 <section class="block darkband">
   <div class="bp"></div>
   <div class="wrap cta-band">
@@ -86,18 +90,13 @@
   mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{const li=a.parentElement;if(innerWidth<=760&&li.querySelector('.mega')){e.preventDefault();li.classList.toggle('exp');}else mainnav.classList.remove('open');});});
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // Make cards/rows fully clickable
-  document.querySelectorAll('.story, .sector-row, .cap[id], .info-card').forEach(el => {
-    const a = el.querySelector('a[href]');
-    if (!a) return;
-    el.style.cursor = 'pointer';
-    el.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') return; // let inner links work normally
-      window.location.href = a.getAttribute('href');
-    });
+  // Clickable cards
+  document.querySelectorAll('.cap[id], .story, .sector-row, .info-card').forEach(el=>{
+    const a=el.querySelector('a[href]');
+    if(!a)return;
+    el.style.cursor='pointer';
+    el.addEventListener('click',function(e){if(e.target.tagName==='A')return;window.location.href=a.getAttribute('href');});
   });
-
 </script>
 </body>
 </html>
