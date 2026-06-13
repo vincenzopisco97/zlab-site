@@ -273,10 +273,10 @@ footer{background:var(--dark);color:#c4d0c0;padding:64px 0 36px}
 .greenband h2{color:#e8f0ec;font-size:clamp(1.9rem,4.2vw,3rem);max-width:22ch;margin:0 auto;letter-spacing:-.02em}
 .greenband p{color:#a8c4b0;max-width:58ch;margin:16px auto 30px;font-size:1.08rem}
 .greenband .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-dark{background:#10210a;color:#dfeccd}
-.btn-dark:hover{background:#0a1607;transform:translateY(-2px);color:#fff}
-.btn-outline{border-color:rgba(16,33,10,.45);color:#10210a;background:transparent}
-.btn-outline:hover{border-color:#10210a;background:rgba(16,33,10,.08)}
+.btn-dark{background:#83ba33;color:#0a1607}
+.btn-dark:hover{background:#9ccb45;transform:translateY(-2px);color:#0a1607}
+.btn-outline{border-color:rgba(232,240,236,.5);color:#e8f0ec;background:transparent}
+.btn-outline:hover{border-color:#e8f0ec;background:rgba(232,240,236,.12)}
 
 /* ===== final CTA with social ===== */
 .cta-social{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
