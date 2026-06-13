@@ -68,12 +68,8 @@
         <img src="logo-dark.png" alt="Z Lab"/>
         <p>Engineering consultancy delivering RAMS, system safety, ILS and certification support to safety-critical industries since 2006.</p>
       </div>
-      <div class="foot-col"><h5>Sectors</h5>
-        <a href="sector-railway.html">Railway</a><a href="sector-aerospace.html">Aerospace</a><a href="sector-naval.html">Naval</a><a href="sector-defense.html">Defense</a><a href="sector-industrial.html">Industrial</a></div>
-      <div class="foot-col"><h5>Capabilities</h5>
-        <a href="cap-dependability.html">Dependability</a><a href="cap-certification.html">Certification</a><a href="cap-engineering.html">Engineering</a></div>
       <div class="foot-col"><h5>Company</h5>
-        <a href="company.html#about">About us</a><a href="company.html#clients">Clients</a><a href="company.html#quality">Quality</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div>
+        <a href="company.html">Company</a><a href="careers.html">Careers</a></div>
     </div>
     <div class="foot-bottom">&copy; 2006&ndash;2026 Z Lab S.r.l. &mdash; All rights reserved</div>
   </div>
@@ -84,7 +80,7 @@
   addEventListener('scroll',onScroll);onScroll();
   const burger=document.getElementById('burger'),mainnav=document.getElementById('mainnav');
   burger.addEventListener('click',()=>mainnav.classList.toggle('open'));
-  mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{const li=a.parentElement;if(innerWidth<=760&&li.querySelector('.mega')){e.preventDefault();li.classList.toggle('exp');}else mainnav.classList.remove('open');});});
+  mainnav.querySelectorAll(':scope>li>a').forEach(a=>{a.addEventListener('click',e=>{const li=a.parentElement;if(innerWidth<=760&&li.querySelector('.mega')){e.preventDefault();const isOpen=li.classList.contains('exp');mainnav.querySelectorAll(':scope>li').forEach(l=>l.classList.remove('exp'));if(!isOpen)li.classList.add('exp');}else mainnav.classList.remove('open');});});
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   // Clickable cards

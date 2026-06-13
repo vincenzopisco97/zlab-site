@@ -267,11 +267,11 @@ footer{background:var(--dark);color:#c4d0c0;padding:64px 0 36px}
 }
 
 /* ===== home green band (between What We Do and final CTA) ===== */
-.greenband{background:linear-gradient(135deg,#6aa11f 0%,#83ba33 60%,#9ccb45 100%);color:#0f1a07;position:relative;overflow:hidden}
-.greenband .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:42px 42px;opacity:.45;mask-image:radial-gradient(ellipse 80% 100% at 80% 30%,#000,transparent 75%)}
+.greenband{background:linear-gradient(135deg,#0d1f1a 0%,#122820 60%,#1a3530 100%);color:#e8f0ec;position:relative;overflow:hidden}
+.greenband .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(131,186,51,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(131,186,51,.08) 1px,transparent 1px);background-size:42px 42px;opacity:.6;mask-image:radial-gradient(ellipse 80% 100% at 80% 30%,#000,transparent 75%)}
 .greenband .wrap{position:relative;z-index:1;text-align:center}
-.greenband h2{color:#0f1a07;font-size:clamp(1.9rem,4.2vw,3rem);max-width:22ch;margin:0 auto;letter-spacing:-.02em}
-.greenband p{color:#1d2e0d;max-width:58ch;margin:16px auto 30px;font-size:1.08rem}
+.greenband h2{color:#e8f0ec;font-size:clamp(1.9rem,4.2vw,3rem);max-width:22ch;margin:0 auto;letter-spacing:-.02em}
+.greenband p{color:#a8c4b0;max-width:58ch;margin:16px auto 30px;font-size:1.08rem}
 .greenband .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn-dark{background:#10210a;color:#dfeccd}
 .btn-dark:hover{background:#0a1607;transform:translateY(-2px);color:#fff}
