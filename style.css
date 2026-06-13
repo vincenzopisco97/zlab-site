@@ -49,18 +49,18 @@ header.onhero .logo .light-l{display:block}
 .mainnav>li>a.has::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-1px);opacity:.5;transition:.25s}
 .mainnav>li:hover>a{color:var(--green-deep);background:var(--green-tint)}
 header.onhero .mainnav>li:hover>a{background:rgba(255,255,255,.12);color:#fff}
-.mega{position:absolute;left:0;right:0;top:100%;background:var(--paper-3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 30px 50px -30px rgba(24,36,29,.25);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s;padding:38px 0}
+.mega{position:absolute;left:0;right:0;top:100%;background:var(--paper-3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 30px 50px -30px rgba(24,36,29,.25);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s;padding:14px 0}
 .mainnav>li:hover .mega{opacity:1;visibility:visible;transform:none}
-.mega-grid{max-width:var(--maxw);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.mega-grid{max-width:var(--maxw);margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:4px}
 .mega-feat{background:linear-gradient(135deg,var(--dark),var(--dark-2));border-radius:14px;padding:26px;color:#fff;position:relative;overflow:hidden}
 .mega-feat .seclabel{color:var(--green)}
 .mega-feat h4{color:#fff;font-size:1.3rem;margin:10px 0 8px}
 .mega-feat p{color:#bcc8b8;font-size:.86rem;margin-bottom:16px}
 .mega-feat .link-arrow{color:var(--green)}
 .mega-feat .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(131,186,51,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(131,186,51,.08) 1px,transparent 1px);background-size:26px 26px;opacity:.6}
-.mega-col h5{font-family:"IBM Plex Mono";font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);margin-bottom:14px}
-.mega-col a{display:block;font-size:.92rem;color:var(--ink-soft);padding:7px 0;border-bottom:1px solid var(--line);transition:.2s}
-.mega-col a:last-child{border:0}
+.mega-col h5{display:none}
+.mega-col a{display:block;font-size:.9rem;font-family:"Manrope",system-ui,sans-serif;font-weight:500;color:var(--ink-soft);padding:6px 32px;border-bottom:none;transition:.2s}
+.mega-col a:last-child{}
 .mega-col a:hover{color:var(--green-deep);padding-left:6px}
 .nav-cta{border:1px solid var(--line-2);padding:8px 16px;border-radius:8px;font-size:.86rem;font-weight:600;color:var(--ink);transition:.25s}
 .nav-cta:hover{border-color:var(--green);background:var(--green-tint);color:var(--green-deep)}
