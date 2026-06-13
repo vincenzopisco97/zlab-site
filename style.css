@@ -321,3 +321,8 @@ footer{background:var(--dark);color:#c4d0c0;padding:64px 0 36px}
 .sechero .badge svg{width:32px;height:32px;color:#cdee93}
 .sechero .idx{position:absolute;top:20px;left:24px;font-family:"IBM Plex Mono";color:rgba(255,255,255,.85);letter-spacing:.2em;font-size:.74rem;text-shadow:0 1px 4px rgba(0,0,0,.7)}
 @media(max-width:760px){.sechero{height:210px}}
+
+/* Capabilities 3-button layout */
+.cap-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:20px 0 40px}
+.cap-btn{flex:1;min-width:180px;max-width:280px;display:flex;align-items:center;justify-content:center;padding:32px 24px;border:1px solid var(--line);border-radius:12px;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem;font-weight:700;color:var(--ink);text-decoration:none;transition:.2s;background:var(--paper)}
+.cap-btn:hover{border-color:var(--green);color:var(--green);background:var(--paper-2);transform:translateY(-2px)}
